@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_localizeapp" default="compile.module.localizeapp">
+  <dirname property="module.localizeapp.basedir" file="${ant.file.module_localizeapp}"/>
+  
+  <property name="module.jdk.home.localizeapp" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.localizeapp" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.localizeapp" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.localizeapp" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="localizeapp.output.dir" value="${module.localizeapp.basedir}/target/classes"/>
+  <property name="localizeapp.testoutput.dir" value="${module.localizeapp.basedir}/target/test-classes"/>
+  
+  <path id="localizeapp.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="localizeapp.module.production.classpath">
+    <path refid="${module.jdk.classpath.localizeapp}"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-client:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-core:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-json:1.8.classpath"/>
+    <path refid="library.maven:_org.codehaus.jettison:jettison:1.1.classpath"/>
+    <path refid="library.maven:_stax:stax-api:1.0.1.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.2.3-1.classpath"/>
+    <path refid="library.maven:_javax.xml.bind:jaxb-api:2.2.2.classpath"/>
+    <path refid="library.maven:_javax.xml.stream:stax-api:1.0-2.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-jaxrs:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-xc:1.7.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.8.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.1.classpath"/>
+  </path>
+  
+  <path id="localizeapp.runtime.production.module.classpath">
+    <pathelement location="${localizeapp.output.dir}"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-client:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-core:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-json:1.8.classpath"/>
+    <path refid="library.maven:_org.codehaus.jettison:jettison:1.1.classpath"/>
+    <path refid="library.maven:_stax:stax-api:1.0.1.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.2.3-1.classpath"/>
+    <path refid="library.maven:_javax.xml.bind:jaxb-api:2.2.2.classpath"/>
+    <path refid="library.maven:_javax.xml.stream:stax-api:1.0-2.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-jaxrs:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-xc:1.7.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.8.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.1.classpath"/>
+  </path>
+  
+  <path id="localizeapp.module.classpath">
+    <path refid="${module.jdk.classpath.localizeapp}"/>
+    <pathelement location="${localizeapp.output.dir}"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-client:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-core:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-json:1.8.classpath"/>
+    <path refid="library.maven:_org.codehaus.jettison:jettison:1.1.classpath"/>
+    <path refid="library.maven:_stax:stax-api:1.0.1.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.2.3-1.classpath"/>
+    <path refid="library.maven:_javax.xml.bind:jaxb-api:2.2.2.classpath"/>
+    <path refid="library.maven:_javax.xml.stream:stax-api:1.0-2.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-jaxrs:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-xc:1.7.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.8.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.1.classpath"/>
+  </path>
+  
+  <path id="localizeapp.runtime.module.classpath">
+    <pathelement location="${localizeapp.testoutput.dir}"/>
+    <pathelement location="${localizeapp.output.dir}"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-client:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-core:1.8.classpath"/>
+    <path refid="library.maven:_com.sun.jersey:jersey-json:1.8.classpath"/>
+    <path refid="library.maven:_org.codehaus.jettison:jettison:1.1.classpath"/>
+    <path refid="library.maven:_stax:stax-api:1.0.1.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.2.3-1.classpath"/>
+    <path refid="library.maven:_javax.xml.bind:jaxb-api:2.2.2.classpath"/>
+    <path refid="library.maven:_javax.xml.stream:stax-api:1.0-2.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-jaxrs:1.7.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-xc:1.7.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.8.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.localizeapp">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.localizeapp">
+    <patternset refid="excluded.from.module.localizeapp"/>
+  </patternset>
+  
+  <path id="localizeapp.module.sourcepath">
+    <dirset dir="${module.localizeapp.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="localizeapp.module.test.sourcepath">
+    <dirset dir="${module.localizeapp.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.localizeapp" depends="compile.module.localizeapp.production,compile.module.localizeapp.tests" description="Compile module LocalizeApp"/>
+  
+  <target name="compile.module.localizeapp.production" depends="register.custom.compilers" description="Compile module LocalizeApp; production classes">
+    <mkdir dir="${localizeapp.output.dir}"/>
+    <javac2 destdir="${localizeapp.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.localizeapp}/javac">
+      <compilerarg line="${compiler.args.localizeapp}"/>
+      <bootclasspath refid="localizeapp.module.bootclasspath"/>
+      <classpath refid="localizeapp.module.production.classpath"/>
+      <src refid="localizeapp.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.localizeapp"/>
+    </javac2>
+    
+    <copy todir="${localizeapp.output.dir}">
+      <fileset dir="${module.localizeapp.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.localizeapp.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.localizeapp.tests" depends="register.custom.compilers,compile.module.localizeapp.production" description="compile module LocalizeApp; test classes" unless="skip.tests">
+    <mkdir dir="${localizeapp.testoutput.dir}"/>
+    <javac2 destdir="${localizeapp.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.localizeapp}/javac">
+      <compilerarg line="${compiler.args.localizeapp}"/>
+      <bootclasspath refid="localizeapp.module.bootclasspath"/>
+      <classpath refid="localizeapp.module.classpath"/>
+      <src refid="localizeapp.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.localizeapp"/>
+    </javac2>
+    
+    <copy todir="${localizeapp.testoutput.dir}">
+      <fileset dir="${module.localizeapp.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.localizeapp" description="cleanup module">
+    <delete dir="${localizeapp.output.dir}"/>
+    <delete dir="${localizeapp.testoutput.dir}"/>
+  </target>
+</project>
